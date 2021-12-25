@@ -1,0 +1,289 @@
+@import "variables";
+@import "mixin";
+
+.container {
+    width: 1200px;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+header {
+    display: grid;
+    grid-template-columns: auto 1fr;
+
+    nav {
+        justify-self: end;
+
+        .menu {
+            list-style: none;
+            display: grid;
+            grid-template-columns: auto auto auto auto;
+            column-gap: 30px;
+
+            a {
+                @include linkStyle($main-font, 18px, medium, none, $grey-color);
+
+                &:hover {
+                    color: black;
+                    text-decoration: underline;
+                    text-decoration-color: $yellow-color;
+                    transition: 0.3s;
+                }
+            }
+        }
+    }
+}
+
+.main-introduce {
+    display: grid;
+    grid-template-columns: auto 1fr;
+
+    .main-introduce-info {
+        align-self: center;
+
+        .introduce-title {
+            @include fontStyle($accent-font, 70px, medium, #202336);
+        }
+
+        .introduce-desc {
+            @include fontStyle($main-font, 24px, 600, #202336);
+            width: 306px;
+            line-height: 35px;
+        }
+
+        .introduce-link {
+            @include linkStyle($accent-font, 26px, bold, none, #ffffff);
+            width: 160px;
+            padding: 10px 15px;
+            background: $yellow-color;
+            border-radius: 8px;
+        }
+    }
+}
+
+.main-web-studio {
+    display: grid;
+
+    .main-subtitle {
+        @include fontStyle($accent-font, 36px, 700, black);
+    }
+
+    .web-studio-text {
+        @include fontStyle($main-font, 18px, madium, black);
+    }
+
+    img {
+        justify-self: center;
+    }
+}
+
+.web-studio-history {
+    .history-subtitle{
+        @include fontStyle($accent-font, 36px, 700,  #000000);
+    }
+    .history-container {
+        display: grid;
+        grid-template-columns: auto 1fr;
+        column-gap: 50px;
+        padding: 30px;
+
+        .history-container-main {
+            display: grid;
+             grid-template-rows:auto auto auto;
+             row-gap:10px;
+
+            .history-first-site{
+                display: grid;
+                justify-self: start;
+
+                .history-title {
+                    @include fontStyle($main-font, 24px, 700, #333333);
+                }
+
+                .history-info {
+                    @include fontStyle($main-font, 16px, medium, #333333);
+                    line-height: 25px;
+                }
+            }
+            .web-studio-develop{
+                .history-title{
+                    @include fontStyle($main-font, 24px, 700, #333333);
+                }
+                .develop-container{
+                    display: grid;
+                    grid-template-columns:auto 1fr;
+                    column-gap:40px;
+
+                    .history-info{
+                        @include fontStyle($main-font, 16px, medium, #333333);
+                        margin: 0;
+                        padding: 0;
+                    }
+
+                    img{
+                        height: 298px;
+                    }
+                }
+            }
+            .add-first-website{
+
+                .history-title{
+                    @include fontStyle($main-font, 24px, 700, #333333);
+                }
+                .history-info{
+                    @include fontStyle($main-font, 16px, medium, #333333);
+                }
+            }
+        }
+    }
+    
+}
+footer{
+    display: grid;
+    grid-template-rows:1fr auto;
+    row-gap:20px;
+    background: #DAF1E982;
+    padding: 54px;
+
+    .footer-biografy{
+        display: grid;
+        grid-template-columns:repeat(1fr, 5);
+        grid-gap:40px;
+
+        .logo-copyright{
+            grid-column:1/2;
+
+            p{
+                @include linkStyle($footer-link-font, 17px, 300, none, $footer-link-color);
+            }
+        }
+
+        .home{
+            display: grid;
+            grid-template-rows:auto auto;
+            row-gap: 10px;
+            grid-column:3/4;
+            margin: 0;
+            padding: 0;
+
+            h5{
+                @include fontStyle($accent-font, 19px, 400, #000000);
+                padding: 0;
+                margin: 0;
+            }
+            
+            ul{
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+
+                li{
+                    a{
+                        @include linkStyle($footer-link-font, 17px, medium, none, $footer-link-color);
+                    }
+                }
+            }
+        }
+
+        .Development-team{
+            display: grid;
+            grid-template-rows:auto auto;
+            row-gap: 10px;
+            grid-column:5/6;
+
+            h5{
+                @include fontStyle($accent-font, 19px, 400, #000000);
+                margin: 0;
+                padding: 0;
+            }
+
+            ul{
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+
+                li{
+                    a{
+                        @include linkStyle($footer-link-font, 17px, medium, none, $footer-link-color);
+                    }
+                    
+                }
+            }
+        }
+
+        .Organization-methods{
+            display: grid;
+            grid-template-rows:auto auto;
+            grid-column:7/8;
+            margin: 0;
+            padding: 0;
+
+            h5{
+                @include fontStyle($accent-font, 19px, 400, #000000);
+                margin: 0;
+                padding: 0;
+            }
+
+            ul{
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+
+                li{
+                   a{
+                    @include linkStyle($footer-link-font, 17px, 300, none, $footer-link-color);
+                   }
+                }
+            }
+        }
+
+        .conclusions{
+            display: grid;
+            grid-template-rows:auto auto;
+            row-gap: 10px;
+            grid-column: 9/10;
+            margin: 0;
+            padding: 0;
+
+            h5{
+                @include fontStyle($accent-font, 19px, 400, #000000);
+                margin: 0;
+                padding: 0;
+            }
+
+            ul{
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+
+                li{
+                   a{
+                    @include linkStyle($footer-link-font, 17px, medium, none, $footer-link-color);
+                   }
+                }
+            }
+        }
+    }
+    .footer-socials{
+        display: grid;
+        justify-content: center;
+        grid-template-columns: repeat(auto, 5);
+        grid-gap: 10px;
+
+        .twitter{
+            grid-column: 1/2;
+        }
+        .facebook{
+            grid-column: 3/4;
+        }
+        .instagram{
+            grid-column: 5/6;
+        }
+        .in{
+            grid-column:7/8;
+        }
+        .youtube{
+            grid-column: 9/10;
+        }
+    }
+}

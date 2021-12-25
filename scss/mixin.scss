@@ -1,0 +1,13 @@
+@mixin linkStyle ($linkFamily, $linkSize, $linkWeight, $textDec, $linkColor){
+    font-family:$linkFamily;
+    font-size:$linkSize;
+    font-weight:$linkWeight;
+    text-decoration:$textDec;
+    color:$linkColor;
+}
+@mixin fontStyle ($fontFamily, $fontSize, $fontWeight, $fontColor){
+    font-family:$fontFamily;
+    font-size: $fontSize;
+    font-weight: $fontWeight;
+    color:$fontColor;
+}

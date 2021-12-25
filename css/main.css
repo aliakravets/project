@@ -1,0 +1,64 @@
+.container {
+  width: 1200px;
+  margin: 0 auto;
+  padding: 10px;
+}
+
+header {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto 1fr;
+      grid-template-columns: auto 1fr;
+}
+
+header nav {
+  -ms-grid-column-align: end;
+      justify-self: end;
+}
+
+header nav .menu {
+  list-style: none;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto auto auto auto;
+      grid-template-columns: auto auto auto auto;
+  -webkit-column-gap: 30px;
+          column-gap: 30px;
+}
+
+header nav .menu a {
+  font-family: Inter, sans-serif;
+  font-size: 18px;
+  font-weight: medium;
+  text-decoration: none;
+  color: #ABAEB5;
+}
+
+header nav .menu a:hover {
+  color: black;
+  text-decoration: underline;
+  -webkit-text-decoration-color: #F6A410;
+          text-decoration-color: #F6A410;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.main-introduce {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto 1fr;
+      grid-template-columns: auto 1fr;
+}
+
+.main-introduce .main-introduce-info {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.main-introduce .main-introduce-info .introduce-title {
+  font-family: "Playfair Display", serif;
+  font-size: 50px;
+  font-weight: medium;
+  color: black;
+}
