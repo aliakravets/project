@@ -287,3 +287,33 @@ footer{
         }
     }
 }
+// ------------------page2-------------------
+.web-studio-product{
+    display: grid;
+    grid-template-columns:auto 1fr;
+    column-gap: 15px;
+
+    .web-studio-product-text{
+        .product-title{
+            @include fontStyle($accent-font, 36px, 700, #000000)
+        }
+        .product-info{
+            @include fontStyle($main-font, 18px, 500, $main-text-color)
+        }
+    }
+}
+.principle{
+    display: grid;
+    grid-template-columns:auto 1fr;
+    column-gap: 15px;
+
+    .principle-text{
+        .principle-title{
+            @include fontStyle($accent-font, 36px, 700, #000000)
+        }
+
+        .principle-info{
+            @include fontStyle($main-font, 18px, 500, $main-text-color)
+        }
+    }
+}
