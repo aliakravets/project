@@ -106,3 +106,443 @@ header {
         }
     }
 }
+.concept{
+    .concept-title{
+        @include fontStyle($accent-font, 26px, 700, #000000);
+        text-align: center;
+    }
+
+    .cards{
+        display: grid;
+        grid-template-columns:auto 1fr auto;
+        column-gap: 110px;
+
+        .roles{
+            background: #DAF1E982;
+            box-shadow: 0px 4px 4px 0px #00000040;
+            padding: 26px;
+            border-radius: 10px;
+
+            .roles-logo{
+                display: grid;
+                justify-content: center;
+
+                .roles-title{
+                    @include fontStyle($accent-font, 20px, 700, #000000);
+                    text-align: center;
+                }
+            }
+
+            .roles-list{
+                li{
+                    @include fontStyle($main-font, 18px, 600, $main-text-color);
+                }
+            }
+
+            .roles-button{
+                display: grid;
+                justify-content: center;
+
+                .button{
+                    background: #F6A410;
+                    padding: 20px;
+                    border-radius: 8px;
+                    display: grid;
+                    justify-content: center;
+
+                    a{
+                        @include linkStyle($accent-font, 16px, 700, none, #ffffff);
+                    }
+                }
+            }
+        }
+
+        .practices{
+            background: rgba(255, 231, 103, 0.36);
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+            padding: 26px;
+            border-radius: 10px;
+
+            .practices-logo{
+                display: grid;
+                justify-content: center;
+
+                .practices-title{
+                    @include fontStyle($accent-font, 20px, 700, #000000);
+                }
+            }
+
+            .practices-list{
+                li{
+                    @include fontStyle($main-font, 18px, 600, $main-text-color);
+                }
+            }
+            .practices-button{
+                display: grid;
+                justify-content: center;
+
+                .button{
+                    width: 139px;
+                    background: #F6A410;
+                    padding: 20px;
+                    border-radius: 8px;
+                    display: grid;
+                    justify-content: center;
+
+                    a{
+                        @include linkStyle($accent-font, 16px, 700, none, #ffffff);
+                    }
+                }
+            }
+        }
+        
+        .documents{
+            padding: 26px;
+            border-radius: 10px;
+            background: rgba(218, 241, 233, 0.51);
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+            .documents-logo{
+                display: grid;
+                justify-content: center;
+
+                .documents-title{
+                    @include fontStyle($accent-font, 20px, 700, #000000);
+                }
+            }
+
+            .documents-list{
+                li{
+                    @include fontStyle($main-font, 18px, 600, $main-text-color);
+                }
+            }
+
+            .documents-button{
+                display: grid;
+                justify-content: center;
+
+                .button{
+                    width: 139px;
+                    background: #F6A410;
+                    padding: 20px;
+                    border-radius: 8px;
+                    display: grid;
+                    justify-content: center;
+
+                    a{
+                        @include linkStyle($accent-font, 16px, 700, none, #ffffff);
+                    }
+                }
+            }
+        }
+    }
+}
+.how-does-it-work{
+    .work-title{
+        @include fontStyle($accent-font, 26px, 700, #000000);
+    }
+    .work-info{
+        @include fontStyle($main-font, 18px, 500, $main-text-color);
+    }
+    .work-photo{
+        display: grid;
+        justify-content: center;
+    }
+}
+.kanban-methodic{
+    line-height: 25px;
+    .content-title{
+        @include fontStyle($accent-font, 36px, 700, #000000);
+    }
+    .kanban-methodic-content{
+        display: grid;
+        grid-template-columns: 1fr auto;
+
+        .content-info{
+            @include fontStyle($main-font, 18px, 500, $main-text-color);
+        }
+    }
+}
+.how-it-does{
+    .does-title{
+        @include fontStyle($accent-font, 26px, 700, #000000);
+    }
+    .does-info{
+        @include fontStyle($main-font, 18px, 500, $main-text-color);
+    }
+    .does-photo{
+        display: grid;
+        justify-content: center;
+    }
+}
+.comparative-characteristics{
+
+    .characteristics-title{
+        @include fontStyle($accent-font, 36px, 700, #000000);
+        text-align: center;
+    }
+
+    .characteristics-content{
+        display: grid;
+        grid-template-columns:1fr auto 1fr;
+        column-gap: 19px;
+
+        .scrum{
+            width: 336px;
+
+            .scrum-title{
+                
+                .scrum-block{
+                    padding: 5px;
+                    background: #62C1C5;
+                    border-radius: 10px;
+                    display: grid;
+                    justify-content: center;
+
+                    h5{
+                        @include fontStyle($main-font, 32px, 400, #ffffff);
+                    }
+                }
+                .scrum-photo{
+                    display: grid;
+                    justify-content: center;
+                }
+            }
+            .scrum-list{
+                display: grid;
+                justify-content: center;
+
+                .scrum-list-red{
+                    width: 260px;
+                    list-style-image:url(../img/red.png);
+
+                    p{
+                        @include fontStyle($main-font, 18px, 700, $main-text-color);
+                    }
+                }
+                .scrum-list-green{
+                    width: 260px;
+                    list-style-image:url(../img/green.png);
+
+                    p{
+                        @include fontStyle($main-font, 18px, 700, $main-text-color);
+                    }
+                }
+            }
+        }
+        .scrum-kanban-photo{
+            display: grid;
+            align-self: center;
+        }
+        .kanban{
+            width: 336px;
+
+            .kanban-title{
+                display: grid;
+
+                .kanban-block{
+                    padding: 5px;
+                    background: #1E8A8C;
+                    border-radius: 10px;
+                    display: grid;
+                    justify-content: center;
+
+                    h5{
+                        @include fontStyle($main-font, 32px, 400, #ffffff);
+                    }
+                }
+                .kanban-photo{
+                    display: grid;
+                    justify-content: center;
+                }
+            }
+            .kanban-list{
+                display: grid;
+                justify-content: center;
+
+                .kanban-list-red{
+                    width: 260px;
+                    list-style-image:url(../img/red.png);
+
+                    &::before{
+                        content:"";
+                    }
+
+                    p{
+                        @include fontStyle($main-font, 18px, 700, $main-text-color);
+                    }
+                }
+                .kanban-list-green{
+                    list-style-image:url(../img/green.png);
+                    width: 260px;
+
+                    p{
+                        @include fontStyle($main-font, 18px, 700, $main-text-color);
+                    }
+                }
+            }
+        }
+    }
+}
+.scrumban-methodology{
+    display: grid;
+    grid-template-columns:auto 1fr;
+
+    .scrumban-text{
+        .scrumban-title{
+            @include fontStyle($accent-font, 36px, 700, #000000);
+        }
+        .scrumban-info{
+            @include fontStyle($main-font, 18px, 500, $main-text-color);
+        }
+    }
+}
+footer{
+    display: grid;
+    grid-template-rows:1fr auto;
+    row-gap:20px;
+    background: #DAF1E982;
+    padding: 54px;
+
+    .footer-biografy{
+        display: grid;
+        grid-template-columns:repeat(1fr, 5);
+        grid-gap:40px;
+
+        .logo-copyright{
+            grid-column:1/2;
+
+            p{
+                @include linkStyle($footer-link-font, 17px, 300, none, $footer-link-color);
+            }
+        }
+
+        .home{
+            display: grid;
+            grid-template-rows:auto auto;
+            row-gap: 10px;
+            grid-column:3/4;
+            margin: 0;
+            padding: 0;
+
+            h5{
+                @include fontStyle($accent-font, 19px, 400, #000000);
+                padding: 0;
+                margin: 0;
+            }
+            
+            ul{
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+
+                li{
+                    a{
+                        @include linkStyle($footer-link-font, 17px, medium, none, $footer-link-color);
+                    }
+                }
+            }
+        }
+
+        .Development-team{
+            display: grid;
+            grid-template-rows:auto auto;
+            row-gap: 10px;
+            grid-column:5/6;
+
+            h5{
+                @include fontStyle($accent-font, 19px, 400, #000000);
+                margin: 0;
+                padding: 0;
+            }
+
+            ul{
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+
+                li{
+                    a{
+                        @include linkStyle($footer-link-font, 17px, medium, none, $footer-link-color);
+                    }
+                    
+                }
+            }
+        }
+
+        .Organization-methods{
+            display: grid;
+            grid-template-rows:auto auto;
+            grid-column:7/8;
+            margin: 0;
+            padding: 0;
+
+            h5{
+                @include fontStyle($accent-font, 19px, 400, #000000);
+                margin: 0;
+                padding: 0;
+            }
+
+            ul{
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+
+                li{
+                   a{
+                    @include linkStyle($footer-link-font, 17px, 300, none, $footer-link-color);
+                   }
+                }
+            }
+        }
+
+        .conclusions{
+            display: grid;
+            grid-template-rows:auto auto;
+            row-gap: 10px;
+            grid-column: 9/10;
+            margin: 0;
+            padding: 0;
+
+            h5{
+                @include fontStyle($accent-font, 19px, 400, #000000);
+                margin: 0;
+                padding: 0;
+            }
+
+            ul{
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+
+                li{
+                   a{
+                    @include linkStyle($footer-link-font, 17px, medium, none, $footer-link-color);
+                   }
+                }
+            }
+        }
+    }
+    .footer-socials{
+        display: grid;
+        justify-content: center;
+        grid-template-columns: repeat(auto, 5);
+        grid-gap: 10px;
+
+        .twitter{
+            grid-column: 1/2;
+        }
+        .facebook{
+            grid-column: 3/4;
+        }
+        .instagram{
+            grid-column: 5/6;
+        }
+        .in{
+            grid-column:7/8;
+        }
+        .youtube{
+            grid-column: 9/10;
+        }
+    }
+}
