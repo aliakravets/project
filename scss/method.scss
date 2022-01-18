@@ -7,6 +7,16 @@
     padding: 10px;
 }
 
+.main-subtitle {
+    @include fontStyle ("Playfair Display", 36px, bold, black);
+}
+
+.main-text-info {
+    @include fontStyle (Inter, 18px, medium, $main-text-color);
+    line-height: 30px;
+}
+
+/*HEADER*/
 header {
     display: grid;
     grid-template-columns: auto 1fr;
@@ -15,13 +25,13 @@ header {
         justify-self: end;
 
         .menu {
-            list-style: none;
             display: grid;
-            grid-template-columns: auto auto auto auto;
+            grid-template-columns: repeat(4, auto);
             column-gap: 30px;
+            list-style: none;
 
             a {
-                @include linkStyle($main-font, 18px, medium, none, $grey-color);
+                @include linkStyle(Inter, 18px, medium, none, $grey-color);
 
                 &:hover {
                     color: black;
@@ -34,515 +44,257 @@ header {
     }
 }
 
+/*INTRODUCE*/
 .main-introduce {
+    margin-top: 40px;
     display: grid;
-    grid-template-columns: auto 1fr;
+    grid-template-columns: 1fr 760px;
 
-    .main-introduce-info {
-        align-self: center;
-
+    &-info {
         .introduce-title {
-            @include fontStyle($accent-font, 70px, medium, #202336);
+            @include fontStyle ("Playfair Display", 70px, bold, black);
         }
 
         .introduce-desc {
-            @include fontStyle($main-font, 24px, 600, #202336);
-            width: 306px;
-            line-height: 35px;
+            @include fontStyle (Inter, 24px, 600, #202336);
         }
 
         .introduce-link {
-            @include linkStyle($accent-font, 26px, bold, none, #ffffff);
-            width: 160px;
-            padding: 10px 15px;
-            background: $yellow-color;
-            border-radius: 8px;
-        }
-    }
-}
-.scrum-methods{
-    display: grid;
-    grid-template-columns: auto 1fr;
-    column-gap: 12px;
-
-    .scrum-methods-text{
-        .methods-text-title{
-            @include fontStyle($accent-font, 36px, 700, #000000);
-        }
-        
-        .methods-text-info{
-            @include fontStyle($main-font, 18px, 500, $main-text-color);
-        }
-    }
-}
-.small-history{
-    display: grid;
-    grid-template-columns:80px 1fr;
-    column-gap: 52px;
-    border: 1px solid #DBEEEA;
-    box-shadow: 0px 4px 4px 0px #00000040;
-    border-radius: 10px;
-
-    .small-history-logo{
-        padding: 15px;
-        line-height: 4px;
-
-        .logo-photo{
-            padding:0 20px;
-            line-height:4px;
-        }
-
-        p{
-            @include fontStyle($main-font, 16px, 400, #6A6A6A);
-            padding: 0 10px;
-            text-align: center;
-            line-height: 20px;
-        }
-    }
-    .small-history-info{
-        p{
-            @include fontStyle($main-font, 14px, 400, #6A6A6A);
-            line-height: 25px;
-        }
-    }
-}
-.concept{
-    .concept-title{
-        @include fontStyle($accent-font, 26px, 700, #000000);
-        text-align: center;
-    }
-
-    .cards{
-        display: grid;
-        grid-template-columns:auto 1fr auto;
-        column-gap: 110px;
-
-        .roles{
-            background: #DAF1E982;
-            box-shadow: 0px 4px 4px 0px #00000040;
-            padding: 26px;
+            background-color: $yellow-color;
+            padding: 5px 40px;
             border-radius: 10px;
-
-            .roles-logo{
-                display: grid;
-                justify-content: center;
-
-                .roles-title{
-                    @include fontStyle($accent-font, 20px, 700, #000000);
-                    text-align: center;
-                }
-            }
-
-            .roles-list{
-                li{
-                    @include fontStyle($main-font, 18px, 600, $main-text-color);
-                }
-            }
-
-            .roles-button{
-                display: grid;
-                justify-content: center;
-
-                .button{
-                    background: #F6A410;
-                    padding: 20px;
-                    border-radius: 8px;
-                    display: grid;
-                    justify-content: center;
-
-                    a{
-                        @include linkStyle($accent-font, 16px, 700, none, #ffffff);
-                    }
-                }
-            }
-        }
-
-        .practices{
-            background: rgba(255, 231, 103, 0.36);
-            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-            padding: 26px;
-            border-radius: 10px;
-
-            .practices-logo{
-                display: grid;
-                justify-content: center;
-
-                .practices-title{
-                    @include fontStyle($accent-font, 20px, 700, #000000);
-                }
-            }
-
-            .practices-list{
-                li{
-                    @include fontStyle($main-font, 18px, 600, $main-text-color);
-                }
-            }
-            .practices-button{
-                display: grid;
-                justify-content: center;
-
-                .button{
-                    width: 139px;
-                    background: #F6A410;
-                    padding: 20px;
-                    border-radius: 8px;
-                    display: grid;
-                    justify-content: center;
-
-                    a{
-                        @include linkStyle($accent-font, 16px, 700, none, #ffffff);
-                    }
-                }
-            }
-        }
-        
-        .documents{
-            padding: 26px;
-            border-radius: 10px;
-            background: rgba(218, 241, 233, 0.51);
-            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-
-            .documents-logo{
-                display: grid;
-                justify-content: center;
-
-                .documents-title{
-                    @include fontStyle($accent-font, 20px, 700, #000000);
-                }
-            }
-
-            .documents-list{
-                li{
-                    @include fontStyle($main-font, 18px, 600, $main-text-color);
-                }
-            }
-
-            .documents-button{
-                display: grid;
-                justify-content: center;
-
-                .button{
-                    width: 139px;
-                    background: #F6A410;
-                    padding: 20px;
-                    border-radius: 8px;
-                    display: grid;
-                    justify-content: center;
-
-                    a{
-                        @include linkStyle($accent-font, 16px, 700, none, #ffffff);
-                    }
-                }
-            }
+            box-shadow: 5px 5px 5px $grey-color;
+            @include linkStyle ("Playfair Display", 26px, bold, none, #fff);
         }
     }
 }
-.how-does-it-work{
-    .work-title{
-        @include fontStyle($accent-font, 26px, 700, #000000);
-    }
-    .work-info{
-        @include fontStyle($main-font, 18px, 500, $main-text-color);
-    }
-    .work-photo{
+
+/*SCRUM*/
+.main-scrum {
+    margin-top: 50px;
+
+    .main-scrum-container {
         display: grid;
-        justify-content: center;
-    }
-}
-.kanban-methodic{
-    line-height: 25px;
-    .content-title{
-        @include fontStyle($accent-font, 36px, 700, #000000);
-    }
-    .kanban-methodic-content{
-        display: grid;
-        grid-template-columns: 1fr auto;
+        grid-template-columns: 426px 1fr;
+        column-gap: 30px;
 
-        .content-info{
-            @include fontStyle($main-font, 18px, 500, $main-text-color);
-        }
-    }
-}
-.how-it-does{
-    .does-title{
-        @include fontStyle($accent-font, 26px, 700, #000000);
-    }
-    .does-info{
-        @include fontStyle($main-font, 18px, 500, $main-text-color);
-    }
-    .does-photo{
-        display: grid;
-        justify-content: center;
-    }
-}
-.comparative-characteristics{
-
-    .characteristics-title{
-        @include fontStyle($accent-font, 36px, 700, #000000);
-        text-align: center;
-    }
-
-    .characteristics-content{
-        display: grid;
-        grid-template-columns:1fr auto 1fr;
-        column-gap: 19px;
-
-        .scrum{
-            width: 336px;
-
-            .scrum-title{
-                
-                .scrum-block{
-                    padding: 5px;
-                    background: #62C1C5;
-                    border-radius: 10px;
-                    display: grid;
-                    justify-content: center;
-
-                    h5{
-                        @include fontStyle($main-font, 32px, 400, #ffffff);
-                    }
-                }
-                .scrum-photo{
-                    display: grid;
-                    justify-content: center;
-                }
-            }
-            .scrum-list{
-                display: grid;
-                justify-content: center;
-
-                .scrum-list-red{
-                    width: 260px;
-                    list-style-image:url(../img/red.png);
-
-                    p{
-                        @include fontStyle($main-font, 18px, 700, $main-text-color);
-                    }
-                }
-                .scrum-list-green{
-                    width: 260px;
-                    list-style-image:url(../img/green.png);
-
-                    p{
-                        @include fontStyle($main-font, 18px, 700, $main-text-color);
-                    }
-                }
-            }
-        }
-        .scrum-kanban-photo{
-            display: grid;
+        img {
             align-self: center;
         }
-        .kanban{
-            width: 336px;
-
-            .kanban-title{
-                display: grid;
-
-                .kanban-block{
-                    padding: 5px;
-                    background: #1E8A8C;
-                    border-radius: 10px;
-                    display: grid;
-                    justify-content: center;
-
-                    h5{
-                        @include fontStyle($main-font, 32px, 400, #ffffff);
-                    }
-                }
-                .kanban-photo{
-                    display: grid;
-                    justify-content: center;
-                }
-            }
-            .kanban-list{
-                display: grid;
-                justify-content: center;
-
-                .kanban-list-red{
-                    width: 260px;
-                    list-style-image:url(../img/red.png);
-
-                    &::before{
-                        content:"";
-                    }
-
-                    p{
-                        @include fontStyle($main-font, 18px, 700, $main-text-color);
-                    }
-                }
-                .kanban-list-green{
-                    list-style-image:url(../img/green.png);
-                    width: 260px;
-
-                    p{
-                        @include fontStyle($main-font, 18px, 700, $main-text-color);
-                    }
-                }
-            }
-        }
     }
 }
-.scrumban-methodology{
-    display: grid;
-    grid-template-columns:auto 1fr;
 
-    .scrumban-text{
-        .scrumban-title{
-            @include fontStyle($accent-font, 36px, 700, #000000);
-        }
-        .scrumban-info{
-            @include fontStyle($main-font, 18px, 500, $main-text-color);
+.main-history {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    column-gap: 25px;
+    box-shadow: 2px 2px 2px 2px $grey-color;
+    padding: 10px;
+
+    .main-history-container {
+        text-align: center;
+        align-self: center;
+
+        .history-title {
+            @include fontStyle ($main-font, 14px, regular, #6A6A6A);
         }
     }
-}
-footer{
-    display: grid;
-    grid-template-rows:1fr auto;
-    row-gap:20px;
-    background: #DAF1E982;
-    padding: 54px;
 
-    .footer-biografy{
+    .history-title-text {
+        @include fontStyle ($main-font, 14px, regular, #6A6A6A);
+        line-height: 25px;
+    }
+}
+
+/*КОНЦЕПЦІЯ СКРАМ МЕТОДОЛОГІЇ*/
+.scrum-method-container {
+    margin-top: 50px;
+
+    h2 {
+        text-align: center;
+    }
+
+    .scrum-method-items {
         display: grid;
-        grid-template-columns:repeat(1fr, 5);
-        grid-gap:40px;
+        grid-template-columns: 250px 365px 250px;
+        justify-content: center;
+        column-gap: 80px;
 
-        .logo-copyright{
-            grid-column:1/2;
+        .scrum-item {
+            height: 365px;
+            border-radius: 20px;
+            box-shadow: 2px 2px 2px 2px $grey-color;
 
-            p{
-                @include linkStyle($footer-link-font, 17px, 300, none, $footer-link-color);
+            img {
+                display: block;
+                margin: 0 auto;
+                padding-top: 40px;
             }
-        }
 
-        .home{
-            display: grid;
-            grid-template-rows:auto auto;
-            row-gap: 10px;
-            grid-column:3/4;
-            margin: 0;
-            padding: 0;
+            .principle-title {
+                @include fontStyle ("Playfair Display", 20px, bold, black);
+                text-align: center;
+            }
 
-            h5{
-                @include fontStyle($accent-font, 19px, 400, #000000);
-                padding: 0;
-                margin: 0;
+            ul {
+                @include fontStyle ($main-font, 18px, 500, $main-text-color);
+            }
+
+            .scrum-link {
+                @include linkStyle ($accent-font, 16px, bold, none, white);
+                background-color: $yellow-color;
+                display: block;
+                width: 139px;
+                height: 45px;
+                text-align: center;
+                border-radius: 10px;
+                padding-top: 20px;
+                margin: 0 auto;
             }
             
-            ul{
-                list-style-type: none;
-                margin: 0;
-                padding: 0;
+        }
 
-                li{
-                    a{
-                        @include linkStyle($footer-link-font, 17px, medium, none, $footer-link-color);
-                    }
-                }
+        .role {
+            background-color: #DAF1E9;
+        }
+
+        .practice {
+            background-color: #FFE767;
+        }
+
+        .documents {
+            background-color: #DAF1E9;
+        }
+    }
+}
+
+/*HOW IT WORKS?*/
+.how-it-works {
+    margin-top: 50px;
+
+    h2 {
+        font-size: 26px;
+    }
+
+    img {
+        display: block;
+        margin: 0 auto;
+    }
+}
+
+/*KANBAN*/
+.kanban-main {
+    margin-top: 50px;
+    .kanban-main-container {
+        display: grid;
+        grid-template-columns: 1fr 430px;
+    }
+}
+
+/*ПОРІВНЯЛЬНА ХАРАКТЕРИСТИКА*/
+.characteristic-main {
+    margin-top: 50px;
+    
+    .main-subtitle {
+        text-align: center;
+        margin-bottom: 50px;
+    }
+
+    &-container {
+        display: grid;
+        grid-template-columns: 336px 346px 336px;
+        justify-content: center;
+        column-gap: 50px;
+
+        .characterictic-bg {
+            img {
+                position: relative;
+            }
+            p {
+                position: relative;
+                bottom: 120px;
+                left: 110px;
+                text-transform: uppercase;
+                @include fontStyle ($main-font, 32px, 400, white);
             }
         }
 
-        .Development-team{
+        .characterictic-scrum-items {
             display: grid;
-            grid-template-rows:auto auto;
-            row-gap: 10px;
-            grid-column:5/6;
+            grid-template-columns: auto 1fr;
+            grid-template-rows: repeat(5, auto);
+            align-items: center;
+            column-gap: 10px;
+            margin-left: 30px;
+            margin-top: -100px;
 
-            h5{
-                @include fontStyle($accent-font, 19px, 400, #000000);
-                margin: 0;
-                padding: 0;
-            }
-
-            ul{
-                list-style-type: none;
-                margin: 0;
-                padding: 0;
-
-                li{
-                    a{
-                        @include linkStyle($footer-link-font, 17px, medium, none, $footer-link-color);
-                    }
-                    
-                }
+            p {
+                @include fontStyle ($main-font, 18px, bold, $main-text-color);
             }
         }
 
-        .Organization-methods{
-            display: grid;
-            grid-template-rows:auto auto;
-            grid-column:7/8;
-            margin: 0;
-            padding: 0;
+        .characterictic-img {
+            align-self: center;
+        }
+    }
+}
 
-            h5{
-                @include fontStyle($accent-font, 19px, 400, #000000);
-                margin: 0;
-                padding: 0;
-            }
+/*SCRAMBAN*/
+.scrumban-main {
+    margin-top: 80px;
+    margin-bottom: 50px;
+    display: grid;
+    grid-template-columns: 425px 1fr;
+    column-gap: 30px;
+    justify-content: center;
 
-            ul{
-                list-style-type: none;
-                margin: 0;
-                padding: 0;
+    img {
+        align-self: center;
+    }
+}
 
-                li{
-                   a{
-                    @include linkStyle($footer-link-font, 17px, 300, none, $footer-link-color);
-                   }
-                }
-            }
+/*FOOTER*/
+footer {
+    background-color: #DAF1E9;
+    padding: 20px;
+    .footer-main {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        column-gap: 30px;
+
+        .footer-copyright {
+            @include fontStyle (Mulish, 18px, light, $footer-link-color);
         }
 
-        .conclusions{
-            display: grid;
-            grid-template-rows:auto auto;
-            row-gap: 10px;
-            grid-column: 9/10;
-            margin: 0;
-            padding: 0;
+        .footer-main-link {
+            @include linkStyle ("Playfair Display", 19px, regular, none, black);
+            padding-left: 36px;
+        }
 
-            h5{
-                @include fontStyle($accent-font, 19px, 400, #000000);
-                margin: 0;
-                padding: 0;
-            }
+        .footer-list-link {
+            list-style: none;
+            a {
+                @include linkStyle (Mulish, 18px, light, none, $footer-link-color);
+                line-height: 30px;
 
-            ul{
-                list-style-type: none;
-                margin: 0;
-                padding: 0;
-
-                li{
-                   a{
-                    @include linkStyle($footer-link-font, 17px, medium, none, $footer-link-color);
-                   }
+                &:hover {
+                    text-decoration: underline;
                 }
             }
         }
     }
-    .footer-socials{
-        display: grid;
-        justify-content: center;
-        grid-template-columns: repeat(auto, 5);
-        grid-gap: 10px;
 
-        .twitter{
-            grid-column: 1/2;
-        }
-        .facebook{
-            grid-column: 3/4;
-        }
-        .instagram{
-            grid-column: 5/6;
-        }
-        .in{
-            grid-column:7/8;
-        }
-        .youtube{
-            grid-column: 9/10;
+    /*.SOCIALS*/
+    .footer-socials {
+        display: grid;
+        grid-template-columns: repeat(5, 22px);
+        column-gap: 30px;
+        justify-content: center;
+        align-items: end;
+
+        a {
+            margin: 0;
+            padding: 0;
         }
     }
 }

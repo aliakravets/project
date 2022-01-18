@@ -1,0 +1,273 @@
+@charset "UTF-8";
+.container {
+  width: 1200px;
+  margin: 0 auto;
+  padding: 10px;
+}
+
+.main-subtitle {
+  font-family: "Playfair Display", serif;
+  font-size: 36px;
+  font-weight: bold;
+  color: black;
+  line-height: 30px;
+}
+
+.main-text-info {
+  font-family: Inter, sans-serif;
+  font-size: 18px;
+  font-weight: medium;
+  color: #333333;
+  line-height: 30px;
+}
+
+/*HEADER*/
+header {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto 1fr;
+      grid-template-columns: auto 1fr;
+}
+
+header nav {
+  -ms-grid-column-align: end;
+      justify-self: end;
+}
+
+header nav .menu {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (auto)[4];
+      grid-template-columns: repeat(4, auto);
+  -webkit-column-gap: 30px;
+          column-gap: 30px;
+  list-style: none;
+}
+
+header nav .menu a {
+  font-family: Inter;
+  font-size: 18px;
+  font-weight: medium;
+  text-decoration: none;
+  color: #ABAEB5;
+}
+
+header nav .menu a:hover {
+  color: black;
+  text-decoration: underline;
+  -webkit-text-decoration-color: #F6A410;
+          text-decoration-color: #F6A410;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+/*INTRODUCE*/
+.main-introduce {
+  margin-top: 40px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 760px;
+      grid-template-columns: 1fr 760px;
+}
+
+.main-introduce-info .introduce-title {
+  font-family: "Playfair Display";
+  font-size: 70px;
+  font-weight: bold;
+  color: black;
+}
+
+.main-introduce-info .introduce-desc {
+  font-family: Inter;
+  font-size: 24px;
+  font-weight: 600;
+  color: #202336;
+}
+
+.main-introduce-info .introduce-link {
+  background-color: #F6A410;
+  padding: 5px 40px;
+  border-radius: 10px;
+  -webkit-box-shadow: 5px 5px 5px #ABAEB5;
+          box-shadow: 5px 5px 5px #ABAEB5;
+  font-family: "Playfair Display";
+  font-size: 26px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #fff;
+}
+
+/*SCRUM та KANBAN*/
+.comparative-main {
+  margin-top: 50px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 432px;
+      grid-template-columns: 1fr 432px;
+  -webkit-column-gap: 30px;
+          column-gap: 30px;
+}
+
+/*СЕРЕДОВИЩА ОРГАНІЗАЦІЇ КОЛЕКТИВУ*/
+.enviroment-main {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.enviroment-main h2 {
+  text-align: center;
+}
+
+.enviroment-main table {
+  margin: 0 auto;
+  border-spacing: 20px;
+}
+
+.enviroment-main table td, .enviroment-main table th {
+  padding: 20px 30px;
+}
+
+.enviroment-main table th {
+  font-family: Inter, sans-serif;
+  font-size: 24px;
+  font-weight: 500;
+  color: white;
+}
+
+.enviroment-main table .dark-blue-item {
+  background-color: #093B5E;
+  border-radius: 10px;
+}
+
+.enviroment-main table .dark-green-item {
+  background-color: #178A8D;
+  border-radius: 10px;
+}
+
+.enviroment-main table .dark-cyan-item {
+  background-color: #63C0C7;
+  border-radius: 10px;
+}
+
+.enviroment-main table .center {
+  text-align: center;
+}
+
+.enviroment-main table .yellow-item {
+  font-family: Inter, sans-serif;
+  font-size: 18px;
+  font-weight: medium;
+  color: black;
+  border-radius: 10px;
+}
+
+.enviroment-main table .yellow-item01 {
+  background-color: #FFDA68;
+}
+
+.enviroment-main table .yellow-item02 {
+  background-color: #FFDA68;
+}
+
+.enviroment-main table .yellow-item03 {
+  background-color: #FFDE77;
+}
+
+.enviroment-main table .yellow-item04 {
+  background-color: #FFE38A;
+}
+
+.enviroment-main table .yellow-item05 {
+  background-color: #FFE9A2;
+}
+
+.enviroment-main table .yellow-item06 {
+  background-color: #FFEEBA;
+}
+
+.enviroment-main table .blue-item {
+  background-color: rgba(32, 40, 112, 0.5);
+}
+
+.enviroment-main table .green-item {
+  background-color: rgba(34, 99, 99, 0.5);
+}
+
+.enviroment-main table .cyan-item {
+  background-color: rgba(128, 175, 247, 0.5);
+}
+
+.enviroment-main table .table-item {
+  font-size: 30px;
+  font-weight: 900;
+}
+
+/*FOOTER*/
+footer {
+  background-color: #DAF1E9;
+  padding: 20px;
+  /*.SOCIALS*/
+}
+
+footer .footer-main {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[5];
+      grid-template-columns: repeat(5, 1fr);
+  -webkit-column-gap: 30px;
+          column-gap: 30px;
+}
+
+footer .footer-main .footer-copyright {
+  font-family: Mulish;
+  font-size: 18px;
+  font-weight: light;
+  color: #717171;
+}
+
+footer .footer-main .footer-main-link {
+  font-family: "Playfair Display";
+  font-size: 19px;
+  font-weight: regular;
+  text-decoration: none;
+  color: black;
+  padding-left: 36px;
+}
+
+footer .footer-main .footer-list-link {
+  list-style: none;
+}
+
+footer .footer-main .footer-list-link a {
+  font-family: Mulish;
+  font-size: 18px;
+  font-weight: light;
+  text-decoration: none;
+  color: #717171;
+  line-height: 30px;
+}
+
+footer .footer-main .footer-list-link a:hover {
+  text-decoration: underline;
+}
+
+footer .footer-socials {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (22px)[5];
+      grid-template-columns: repeat(5, 22px);
+  -webkit-column-gap: 30px;
+          column-gap: 30px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: end;
+}
+
+footer .footer-socials a {
+  margin: 0;
+  padding: 0;
+}
+/*# sourceMappingURL=conclusion.css.map */

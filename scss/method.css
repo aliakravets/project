@@ -1,9 +1,26 @@
+@charset "UTF-8";
 .container {
   width: 1200px;
   margin: 0 auto;
   padding: 10px;
 }
 
+.main-subtitle {
+  font-family: "Playfair Display";
+  font-size: 36px;
+  font-weight: bold;
+  color: black;
+}
+
+.main-text-info {
+  font-family: Inter;
+  font-size: 18px;
+  font-weight: medium;
+  color: #333333;
+  line-height: 30px;
+}
+
+/*HEADER*/
 header {
   display: -ms-grid;
   display: grid;
@@ -17,17 +34,17 @@ header nav {
 }
 
 header nav .menu {
-  list-style: none;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: auto auto auto auto;
-      grid-template-columns: auto auto auto auto;
+  -ms-grid-columns: (auto)[4];
+      grid-template-columns: repeat(4, auto);
   -webkit-column-gap: 30px;
           column-gap: 30px;
+  list-style: none;
 }
 
 header nav .menu a {
-  font-family: Inter, sans-serif;
+  font-family: Inter;
   font-size: 18px;
   font-weight: medium;
   text-decoration: none;
@@ -43,760 +60,352 @@ header nav .menu a:hover {
   transition: 0.3s;
 }
 
+/*INTRODUCE*/
 .main-introduce {
+  margin-top: 40px;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: auto 1fr;
-      grid-template-columns: auto 1fr;
+  -ms-grid-columns: 1fr 760px;
+      grid-template-columns: 1fr 760px;
 }
 
-.main-introduce .main-introduce-info {
+.main-introduce-info .introduce-title {
+  font-family: "Playfair Display";
+  font-size: 70px;
+  font-weight: bold;
+  color: black;
+}
+
+.main-introduce-info .introduce-desc {
+  font-family: Inter;
+  font-size: 24px;
+  font-weight: 600;
+  color: #202336;
+}
+
+.main-introduce-info .introduce-link {
+  background-color: #F6A410;
+  padding: 5px 40px;
+  border-radius: 10px;
+  -webkit-box-shadow: 5px 5px 5px #ABAEB5;
+          box-shadow: 5px 5px 5px #ABAEB5;
+  font-family: "Playfair Display";
+  font-size: 26px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #fff;
+}
+
+/*SCRUM*/
+.main-scrum {
+  margin-top: 50px;
+}
+
+.main-scrum .main-scrum-container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 426px 1fr;
+      grid-template-columns: 426px 1fr;
+  -webkit-column-gap: 30px;
+          column-gap: 30px;
+}
+
+.main-scrum .main-scrum-container img {
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
 }
 
-.main-introduce .main-introduce-info .introduce-title {
-  font-family: "Playfair Display", serif;
-  font-size: 70px;
-  font-weight: medium;
-  color: #202336;
-}
-
-.main-introduce .main-introduce-info .introduce-desc {
-  font-family: Inter, sans-serif;
-  font-size: 24px;
-  font-weight: 600;
-  color: #202336;
-  width: 306px;
-  line-height: 35px;
-}
-
-.main-introduce .main-introduce-info .introduce-link {
-  font-family: "Playfair Display", serif;
-  font-size: 26px;
-  font-weight: bold;
-  text-decoration: none;
-  color: #ffffff;
-  width: 160px;
-  padding: 10px 15px;
-  background: #F6A410;
-  border-radius: 8px;
-}
-
-.scrum-methods {
+.main-history {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: auto 1fr;
       grid-template-columns: auto 1fr;
-  -webkit-column-gap: 12px;
-          column-gap: 12px;
+  -webkit-column-gap: 25px;
+          column-gap: 25px;
+  -webkit-box-shadow: 2px 2px 2px 2px #ABAEB5;
+          box-shadow: 2px 2px 2px 2px #ABAEB5;
+  padding: 10px;
 }
 
-.scrum-methods .scrum-methods-text .methods-text-title {
-  font-family: "Playfair Display", serif;
-  font-size: 36px;
-  font-weight: 700;
-  color: #000000;
-}
-
-.scrum-methods .scrum-methods-text .methods-text-info {
-  font-family: Inter, sans-serif;
-  font-size: 18px;
-  font-weight: 500;
-  color: #333333;
-}
-
-.small-history {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 80px 1fr;
-      grid-template-columns: 80px 1fr;
-  -webkit-column-gap: 52px;
-          column-gap: 52px;
-  border: 1px solid #DBEEEA;
-  -webkit-box-shadow: 0px 4px 4px 0px #00000040;
-          box-shadow: 0px 4px 4px 0px #00000040;
-  border-radius: 10px;
-}
-
-.small-history .small-history-logo {
-  padding: 15px;
-  line-height: 4px;
-}
-
-.small-history .small-history-logo .logo-photo {
-  padding: 0 20px;
-  line-height: 4px;
-}
-
-.small-history .small-history-logo p {
-  font-family: Inter, sans-serif;
-  font-size: 16px;
-  font-weight: 400;
-  color: #6A6A6A;
-  padding: 0 10px;
+.main-history .main-history-container {
   text-align: center;
-  line-height: 20px;
-}
-
-.small-history .small-history-info p {
-  font-family: Inter, sans-serif;
-  font-size: 14px;
-  font-weight: 400;
-  color: #6A6A6A;
-  line-height: 25px;
-}
-
-.concept .concept-title {
-  font-family: "Playfair Display", serif;
-  font-size: 26px;
-  font-weight: 700;
-  color: #000000;
-  text-align: center;
-}
-
-.concept .cards {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: auto 1fr auto;
-      grid-template-columns: auto 1fr auto;
-  -webkit-column-gap: 110px;
-          column-gap: 110px;
-}
-
-.concept .cards .roles {
-  background: #DAF1E982;
-  -webkit-box-shadow: 0px 4px 4px 0px #00000040;
-          box-shadow: 0px 4px 4px 0px #00000040;
-  padding: 26px;
-  border-radius: 10px;
-}
-
-.concept .cards .roles .roles-logo {
-  display: -ms-grid;
-  display: grid;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-.concept .cards .roles .roles-logo .roles-title {
-  font-family: "Playfair Display", serif;
-  font-size: 20px;
-  font-weight: 700;
-  color: #000000;
-  text-align: center;
-}
-
-.concept .cards .roles .roles-list li {
-  font-family: Inter, sans-serif;
-  font-size: 18px;
-  font-weight: 600;
-  color: #333333;
-}
-
-.concept .cards .roles .roles-button {
-  display: -ms-grid;
-  display: grid;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-.concept .cards .roles .roles-button .button {
-  background: #F6A410;
-  padding: 20px;
-  border-radius: 8px;
-  display: -ms-grid;
-  display: grid;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-.concept .cards .roles .roles-button .button a {
-  font-family: "Playfair Display", serif;
-  font-size: 16px;
-  font-weight: 700;
-  text-decoration: none;
-  color: #ffffff;
-}
-
-.concept .cards .practices {
-  background: rgba(255, 231, 103, 0.36);
-  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  padding: 26px;
-  border-radius: 10px;
-}
-
-.concept .cards .practices .practices-logo {
-  display: -ms-grid;
-  display: grid;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-.concept .cards .practices .practices-logo .practices-title {
-  font-family: "Playfair Display", serif;
-  font-size: 20px;
-  font-weight: 700;
-  color: #000000;
-}
-
-.concept .cards .practices .practices-list li {
-  font-family: Inter, sans-serif;
-  font-size: 18px;
-  font-weight: 600;
-  color: #333333;
-}
-
-.concept .cards .practices .practices-button {
-  display: -ms-grid;
-  display: grid;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-.concept .cards .practices .practices-button .button {
-  width: 139px;
-  background: #F6A410;
-  padding: 20px;
-  border-radius: 8px;
-  display: -ms-grid;
-  display: grid;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-.concept .cards .practices .practices-button .button a {
-  font-family: "Playfair Display", serif;
-  font-size: 16px;
-  font-weight: 700;
-  text-decoration: none;
-  color: #ffffff;
-}
-
-.concept .cards .documents {
-  padding: 26px;
-  border-radius: 10px;
-  background: rgba(218, 241, 233, 0.51);
-  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-}
-
-.concept .cards .documents .documents-logo {
-  display: -ms-grid;
-  display: grid;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-.concept .cards .documents .documents-logo .documents-title {
-  font-family: "Playfair Display", serif;
-  font-size: 20px;
-  font-weight: 700;
-  color: #000000;
-}
-
-.concept .cards .documents .documents-list li {
-  font-family: Inter, sans-serif;
-  font-size: 18px;
-  font-weight: 600;
-  color: #333333;
-}
-
-.concept .cards .documents .documents-button {
-  display: -ms-grid;
-  display: grid;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-.concept .cards .documents .documents-button .button {
-  width: 139px;
-  background: #F6A410;
-  padding: 20px;
-  border-radius: 8px;
-  display: -ms-grid;
-  display: grid;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-.concept .cards .documents .documents-button .button a {
-  font-family: "Playfair Display", serif;
-  font-size: 16px;
-  font-weight: 700;
-  text-decoration: none;
-  color: #ffffff;
-}
-
-.how-does-it-work .work-title {
-  font-family: "Playfair Display", serif;
-  font-size: 26px;
-  font-weight: 700;
-  color: #000000;
-}
-
-.how-does-it-work .work-info {
-  font-family: Inter, sans-serif;
-  font-size: 18px;
-  font-weight: 500;
-  color: #333333;
-}
-
-.how-does-it-work .work-photo {
-  display: -ms-grid;
-  display: grid;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-.kanban-methodic {
-  line-height: 25px;
-}
-
-.kanban-methodic .content-title {
-  font-family: "Playfair Display", serif;
-  font-size: 36px;
-  font-weight: 700;
-  color: #000000;
-}
-
-.kanban-methodic .kanban-methodic-content {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 1fr auto;
-      grid-template-columns: 1fr auto;
-}
-
-.kanban-methodic .kanban-methodic-content .content-info {
-  font-family: Inter, sans-serif;
-  font-size: 18px;
-  font-weight: 500;
-  color: #333333;
-}
-
-.how-it-does .does-title {
-  font-family: "Playfair Display", serif;
-  font-size: 26px;
-  font-weight: 700;
-  color: #000000;
-}
-
-.how-it-does .does-info {
-  font-family: Inter, sans-serif;
-  font-size: 18px;
-  font-weight: 500;
-  color: #333333;
-}
-
-.how-it-does .does-photo {
-  display: -ms-grid;
-  display: grid;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-.comparative-characteristics .characteristics-title {
-  font-family: "Playfair Display", serif;
-  font-size: 36px;
-  font-weight: 700;
-  color: #000000;
-  text-align: center;
-}
-
-.comparative-characteristics .characteristics-content {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 1fr auto 1fr;
-      grid-template-columns: 1fr auto 1fr;
-  -webkit-column-gap: 19px;
-          column-gap: 19px;
-}
-
-.comparative-characteristics .characteristics-content .scrum {
-  width: 336px;
-}
-
-.comparative-characteristics .characteristics-content .scrum .scrum-title .scrum-block {
-  padding: 5px;
-  background: #62C1C5;
-  border-radius: 10px;
-  display: -ms-grid;
-  display: grid;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-.comparative-characteristics .characteristics-content .scrum .scrum-title .scrum-block h5 {
-  font-family: Inter, sans-serif;
-  font-size: 32px;
-  font-weight: 400;
-  color: #ffffff;
-}
-
-.comparative-characteristics .characteristics-content .scrum .scrum-title .scrum-photo {
-  display: -ms-grid;
-  display: grid;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-.comparative-characteristics .characteristics-content .scrum .scrum-list {
-  display: -ms-grid;
-  display: grid;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-.comparative-characteristics .characteristics-content .scrum .scrum-list .scrum-list-red {
-  width: 260px;
-  list-style-image: url(../img/red.png);
-}
-
-.comparative-characteristics .characteristics-content .scrum .scrum-list .scrum-list-red p {
-  font-family: Inter, sans-serif;
-  font-size: 18px;
-  font-weight: 700;
-  color: #333333;
-}
-
-.comparative-characteristics .characteristics-content .scrum .scrum-list .scrum-list-green {
-  width: 260px;
-  list-style-image: url(../img/green.png);
-}
-
-.comparative-characteristics .characteristics-content .scrum .scrum-list .scrum-list-green p {
-  font-family: Inter, sans-serif;
-  font-size: 18px;
-  font-weight: 700;
-  color: #333333;
-}
-
-.comparative-characteristics .characteristics-content .scrum-kanban-photo {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-row-align: center;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
       align-self: center;
 }
 
-.comparative-characteristics .characteristics-content .kanban {
-  width: 336px;
+.main-history .main-history-container .history-title {
+  font-family: Inter, sans-serif;
+  font-size: 14px;
+  font-weight: regular;
+  color: #6A6A6A;
 }
 
-.comparative-characteristics .characteristics-content .kanban .kanban-title {
-  display: -ms-grid;
-  display: grid;
+.main-history .history-title-text {
+  font-family: Inter, sans-serif;
+  font-size: 14px;
+  font-weight: regular;
+  color: #6A6A6A;
+  line-height: 25px;
 }
 
-.comparative-characteristics .characteristics-content .kanban .kanban-title .kanban-block {
-  padding: 5px;
-  background: #1E8A8C;
-  border-radius: 10px;
+/*КОНЦЕПЦІЯ СКРАМ МЕТОДОЛОГІЇ*/
+.scrum-method-container {
+  margin-top: 50px;
+}
+
+.scrum-method-container h2 {
+  text-align: center;
+}
+
+.scrum-method-container .scrum-method-items {
   display: -ms-grid;
   display: grid;
+  -ms-grid-columns: 250px 365px 250px;
+      grid-template-columns: 250px 365px 250px;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-column-gap: 80px;
+          column-gap: 80px;
 }
 
-.comparative-characteristics .characteristics-content .kanban .kanban-title .kanban-block h5 {
-  font-family: Inter, sans-serif;
-  font-size: 32px;
-  font-weight: 400;
-  color: #ffffff;
+.scrum-method-container .scrum-method-items .scrum-item {
+  height: 365px;
+  border-radius: 20px;
+  -webkit-box-shadow: 2px 2px 2px 2px #ABAEB5;
+          box-shadow: 2px 2px 2px 2px #ABAEB5;
 }
 
-.comparative-characteristics .characteristics-content .kanban .kanban-title .kanban-photo {
-  display: -ms-grid;
-  display: grid;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+.scrum-method-container .scrum-method-items .scrum-item img {
+  display: block;
+  margin: 0 auto;
+  padding-top: 40px;
 }
 
-.comparative-characteristics .characteristics-content .kanban .kanban-list {
-  display: -ms-grid;
-  display: grid;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+.scrum-method-container .scrum-method-items .scrum-item .principle-title {
+  font-family: "Playfair Display";
+  font-size: 20px;
+  font-weight: bold;
+  color: black;
+  text-align: center;
 }
 
-.comparative-characteristics .characteristics-content .kanban .kanban-list .kanban-list-red {
-  width: 260px;
-  list-style-image: url(../img/red.png);
-}
-
-.comparative-characteristics .characteristics-content .kanban .kanban-list .kanban-list-red::before {
-  content: "";
-}
-
-.comparative-characteristics .characteristics-content .kanban .kanban-list .kanban-list-red p {
-  font-family: Inter, sans-serif;
-  font-size: 18px;
-  font-weight: 700;
-  color: #333333;
-}
-
-.comparative-characteristics .characteristics-content .kanban .kanban-list .kanban-list-green {
-  list-style-image: url(../img/green.png);
-  width: 260px;
-}
-
-.comparative-characteristics .characteristics-content .kanban .kanban-list .kanban-list-green p {
-  font-family: Inter, sans-serif;
-  font-size: 18px;
-  font-weight: 700;
-  color: #333333;
-}
-
-.scrumban-methodology {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: auto 1fr;
-      grid-template-columns: auto 1fr;
-}
-
-.scrumban-methodology .scrumban-text .scrumban-title {
-  font-family: "Playfair Display", serif;
-  font-size: 36px;
-  font-weight: 700;
-  color: #000000;
-}
-
-.scrumban-methodology .scrumban-text .scrumban-info {
+.scrum-method-container .scrum-method-items .scrum-item ul {
   font-family: Inter, sans-serif;
   font-size: 18px;
   font-weight: 500;
   color: #333333;
 }
 
+.scrum-method-container .scrum-method-items .scrum-item .scrum-link {
+  font-family: "Playfair Display", serif;
+  font-size: 16px;
+  font-weight: bold;
+  text-decoration: none;
+  color: white;
+  background-color: #F6A410;
+  display: block;
+  width: 139px;
+  height: 45px;
+  text-align: center;
+  border-radius: 10px;
+  padding-top: 20px;
+  margin: 0 auto;
+}
+
+.scrum-method-container .scrum-method-items .role {
+  background-color: #DAF1E9;
+}
+
+.scrum-method-container .scrum-method-items .practice {
+  background-color: #FFE767;
+}
+
+.scrum-method-container .scrum-method-items .documents {
+  background-color: #DAF1E9;
+}
+
+/*HOW IT WORKS?*/
+.how-it-works {
+  margin-top: 50px;
+}
+
+.how-it-works h2 {
+  font-size: 26px;
+}
+
+.how-it-works img {
+  display: block;
+  margin: 0 auto;
+}
+
+/*KANBAN*/
+.kanban-main {
+  margin-top: 50px;
+}
+
+.kanban-main .kanban-main-container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 430px;
+      grid-template-columns: 1fr 430px;
+}
+
+/*ПОРІВНЯЛЬНА ХАРАКТЕРИСТИКА*/
+.characteristic-main {
+  margin-top: 50px;
+}
+
+.characteristic-main .main-subtitle {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.characteristic-main-container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 336px 346px 336px;
+      grid-template-columns: 336px 346px 336px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-column-gap: 50px;
+          column-gap: 50px;
+}
+
+.characteristic-main-container .characterictic-bg img {
+  position: relative;
+}
+
+.characteristic-main-container .characterictic-bg p {
+  position: relative;
+  bottom: 120px;
+  left: 110px;
+  text-transform: uppercase;
+  font-family: Inter, sans-serif;
+  font-size: 32px;
+  font-weight: 400;
+  color: white;
+}
+
+.characteristic-main-container .characterictic-scrum-items {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto 1fr;
+      grid-template-columns: auto 1fr;
+  -ms-grid-rows: (auto)[5];
+      grid-template-rows: repeat(5, auto);
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-column-gap: 10px;
+          column-gap: 10px;
+  margin-left: 30px;
+  margin-top: -100px;
+}
+
+.characteristic-main-container .characterictic-scrum-items p {
+  font-family: Inter, sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+  color: #333333;
+}
+
+.characteristic-main-container .characterictic-img {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+/*SCRAMBAN*/
+.scrumban-main {
+  margin-top: 80px;
+  margin-bottom: 50px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 425px 1fr;
+      grid-template-columns: 425px 1fr;
+  -webkit-column-gap: 30px;
+          column-gap: 30px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.scrumban-main img {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+/*FOOTER*/
 footer {
+  background-color: #DAF1E9;
+  padding: 20px;
+  /*.SOCIALS*/
+}
+
+footer .footer-main {
   display: -ms-grid;
   display: grid;
-  -ms-grid-rows: 1fr auto;
-      grid-template-rows: 1fr auto;
-  row-gap: 20px;
-  background: #DAF1E982;
-  padding: 54px;
+  -ms-grid-columns: (1fr)[5];
+      grid-template-columns: repeat(5, 1fr);
+  -webkit-column-gap: 30px;
+          column-gap: 30px;
 }
 
-footer .footer-biografy {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: (5)[1fr];
-      grid-template-columns: repeat(1fr, 5);
-  grid-gap: 40px;
-}
-
-footer .footer-biografy .logo-copyright {
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 1;
-  grid-column: 1/2;
-}
-
-footer .footer-biografy .logo-copyright p {
-  font-family: Mulish, sans-serif;
-  font-size: 17px;
-  font-weight: 300;
-  text-decoration: none;
+footer .footer-main .footer-copyright {
+  font-family: Mulish;
+  font-size: 18px;
+  font-weight: light;
   color: #717171;
 }
 
-footer .footer-biografy .home {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-rows: auto auto;
-      grid-template-rows: auto auto;
-  row-gap: 10px;
-  -ms-grid-column: 3;
-  -ms-grid-column-span: 1;
-  grid-column: 3/4;
-  margin: 0;
-  padding: 0;
-}
-
-footer .footer-biografy .home h5 {
-  font-family: "Playfair Display", serif;
+footer .footer-main .footer-main-link {
+  font-family: "Playfair Display";
   font-size: 19px;
-  font-weight: 400;
-  color: #000000;
-  padding: 0;
-  margin: 0;
+  font-weight: regular;
+  text-decoration: none;
+  color: black;
+  padding-left: 36px;
 }
 
-footer .footer-biografy .home ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
+footer .footer-main .footer-list-link {
+  list-style: none;
 }
 
-footer .footer-biografy .home ul li a {
-  font-family: Mulish, sans-serif;
-  font-size: 17px;
-  font-weight: medium;
+footer .footer-main .footer-list-link a {
+  font-family: Mulish;
+  font-size: 18px;
+  font-weight: light;
   text-decoration: none;
   color: #717171;
+  line-height: 30px;
 }
 
-footer .footer-biografy .Development-team {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-rows: auto auto;
-      grid-template-rows: auto auto;
-  row-gap: 10px;
-  -ms-grid-column: 5;
-  -ms-grid-column-span: 1;
-  grid-column: 5/6;
-}
-
-footer .footer-biografy .Development-team h5 {
-  font-family: "Playfair Display", serif;
-  font-size: 19px;
-  font-weight: 400;
-  color: #000000;
-  margin: 0;
-  padding: 0;
-}
-
-footer .footer-biografy .Development-team ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-}
-
-footer .footer-biografy .Development-team ul li a {
-  font-family: Mulish, sans-serif;
-  font-size: 17px;
-  font-weight: medium;
-  text-decoration: none;
-  color: #717171;
-}
-
-footer .footer-biografy .Organization-methods {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-rows: auto auto;
-      grid-template-rows: auto auto;
-  -ms-grid-column: 7;
-  -ms-grid-column-span: 1;
-  grid-column: 7/8;
-  margin: 0;
-  padding: 0;
-}
-
-footer .footer-biografy .Organization-methods h5 {
-  font-family: "Playfair Display", serif;
-  font-size: 19px;
-  font-weight: 400;
-  color: #000000;
-  margin: 0;
-  padding: 0;
-}
-
-footer .footer-biografy .Organization-methods ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-}
-
-footer .footer-biografy .Organization-methods ul li a {
-  font-family: Mulish, sans-serif;
-  font-size: 17px;
-  font-weight: 300;
-  text-decoration: none;
-  color: #717171;
-}
-
-footer .footer-biografy .conclusions {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-rows: auto auto;
-      grid-template-rows: auto auto;
-  row-gap: 10px;
-  -ms-grid-column: 9;
-  -ms-grid-column-span: 1;
-  grid-column: 9/10;
-  margin: 0;
-  padding: 0;
-}
-
-footer .footer-biografy .conclusions h5 {
-  font-family: "Playfair Display", serif;
-  font-size: 19px;
-  font-weight: 400;
-  color: #000000;
-  margin: 0;
-  padding: 0;
-}
-
-footer .footer-biografy .conclusions ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-}
-
-footer .footer-biografy .conclusions ul li a {
-  font-family: Mulish, sans-serif;
-  font-size: 17px;
-  font-weight: medium;
-  text-decoration: none;
-  color: #717171;
+footer .footer-main .footer-list-link a:hover {
+  text-decoration: underline;
 }
 
 footer .footer-socials {
   display: -ms-grid;
   display: grid;
+  -ms-grid-columns: (22px)[5];
+      grid-template-columns: repeat(5, 22px);
+  -webkit-column-gap: 30px;
+          column-gap: 30px;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -ms-grid-columns: (5)[auto];
-      grid-template-columns: repeat(auto, 5);
-  grid-gap: 10px;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: end;
 }
 
-footer .footer-socials .twitter {
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 1;
-  grid-column: 1/2;
-}
-
-footer .footer-socials .facebook {
-  -ms-grid-column: 3;
-  -ms-grid-column-span: 1;
-  grid-column: 3/4;
-}
-
-footer .footer-socials .instagram {
-  -ms-grid-column: 5;
-  -ms-grid-column-span: 1;
-  grid-column: 5/6;
-}
-
-footer .footer-socials .in {
-  -ms-grid-column: 7;
-  -ms-grid-column-span: 1;
-  grid-column: 7/8;
-}
-
-footer .footer-socials .youtube {
-  -ms-grid-column: 9;
-  -ms-grid-column-span: 1;
-  grid-column: 9/10;
+footer .footer-socials a {
+  margin: 0;
+  padding: 0;
 }
 /*# sourceMappingURL=method.css.map */

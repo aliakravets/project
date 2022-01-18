@@ -1,0 +1,290 @@
+@import "variables";
+@import "mixin";
+
+.container {
+    width: 1200px;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+.main-subtitle {
+    @include fontStyle ("Playfair Display", 36px, bold, black);
+}
+.team-info {
+    @include fontStyle ($main-font, 18px, medium, $main-text-color);
+    line-height: 30px;
+}
+
+/*HEADER*/
+header {
+    display: grid;
+    grid-template-columns: auto 1fr;
+
+    nav {
+        justify-self: end;
+
+        .menu {
+            display: grid;
+            grid-template-columns: repeat(4, auto);
+            column-gap: 30px;
+            list-style: none;
+
+            a {
+                @include linkStyle(Inter, 18px, medium, none, $grey-color);
+
+                &:hover {
+                    color: black;
+                    text-decoration: underline;
+                    text-decoration-color: $yellow-color;
+                    transition: 0.3s;
+                }
+            }
+        }
+    }
+}
+
+/*INTRODUCE*/
+.main-introduce {
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: 1fr 760px;
+
+    &-info {
+        .introduce-title {
+            @include fontStyle ("Playfair Display", 70px, bold, black);
+        }
+
+        .introduce-desc {
+            @include fontStyle (Inter, 24px, 600, #202336);
+        }
+
+        .introduce-link {
+            background-color: $yellow-color;
+            padding: 5px 40px;
+            border-radius: 10px;
+            box-shadow: 5px 5px 5px $grey-color;
+            @include linkStyle ("Playfair Display", 26px, bold, none, #fff);
+        }
+    }
+}
+
+/*WEB-STUDIO-PRODUCT*/
+.web-studio-product {
+    display: grid;
+    grid-template-columns: 442px 1fr;
+    margin-top: 30px;
+}
+
+.steps {
+    margin-top: 30px;
+
+    .main-subtitle {
+        text-align: center;
+        margin-bottom: 50px;
+    }
+
+    .steps-item {
+        width: 250px;
+        height: 239px;
+        border-radius: 20px;
+        box-shadow: 5px 5px 5px rgba(122, 122, 122, 0.5);
+    }
+
+    .steps-title {
+        @include fontStyle ($main-font, 16px, bold, $main-text-color);
+        text-align: center;
+    }
+
+    .steps-desc {
+        @include fontStyle ($main-font, 16px, medium, $main-text-color);
+        text-align: center;
+    }
+
+    .steps-img {
+        display: block;
+        margin: 0 auto;
+    }
+
+    .steps-arrow {
+        align-self: center;
+    }
+
+    .steps-container-first {
+        display: grid;
+        grid-template-columns: repeat(6, auto);
+
+        .requirements {
+            background-color: #F2FDFF;
+        }
+
+        .design {
+            background-color: #E5FAFE;
+        }
+
+        .coding {
+            background-color: #DCF9FF;
+        }
+    }
+
+    .steps-container-second {
+        margin-top: 50px;
+        display: grid;
+        grid-template-columns: repeat(6, auto);
+        justify-items: end;
+
+        .support {
+            background-color: #AAE3EF;
+        }
+
+        .release {
+            background-color: #C1ECF5;
+        }
+
+        .testing {
+            background-color: #C7F3FC;
+        }
+    }
+}
+
+/*WORK-DEVISION*/
+.work-devision {
+    display: grid;
+    grid-template-columns: 433px 1fr;
+    column-gap: 30px;
+    margin-top: 40px;
+
+    img {
+        align-self: center;
+    }
+}
+
+/*DEVELOPMENT-TEAM*/
+.development-team-container {
+    margin-top: 30px;
+}
+
+.main-subtitle-team {
+    text-align: center;
+} 
+
+.development-team {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-auto-rows: repeat(6, 150px);
+    gap: 20px;
+
+    .team-item {
+        border-radius: 20px;
+        box-sizing: border-box;
+        padding: 15px;
+
+        .team-title {
+            @include fontStyle ($main-font, 24px, bold, black);
+        }
+
+        .team-desc {
+            @include fontStyle ($main-font, 16px, medium, $main-text-color);
+            line-height: 25px;
+        }
+    }
+
+    .project-manager {
+        grid-row: span 2;
+        background-color: #FFFACF;
+    }
+
+    .bisuness-analyst {
+        background-color: #FFFDCF;
+    }
+
+    .team-lead {
+        background-color: #F5FFD9;
+    }
+
+    .architect {
+        background-color: #EEFFD9;
+    }
+
+    .team-image {
+        grid-row: span 2;
+        align-self: center;
+    }
+
+    .designer {
+        background-color: #E0FFD9;
+    }
+
+    .developer {
+        background-color: #CDF4D9;
+        grid-row: span 2;
+    }
+
+    .tester {
+        background-color: #B3DEC1;
+    }
+    
+    .support {
+        background-color: #98CBA8;
+    }
+}
+
+/*BEST-SPECIALISTS*/
+.best-specialists {
+    margin-top: 50px;
+    margin-bottom: 50px;
+
+    .main-subtitle {
+        text-align: center;
+    }
+
+    img {
+        display: block;
+        margin: 0 auto;
+    }
+}
+
+/*FOOTER*/
+footer {
+    background-color: #DAF1E9;
+    padding: 20px;
+    .footer-main {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        column-gap: 30px;
+
+        .footer-copyright {
+            @include fontStyle (Mulish, 18px, light, $footer-link-color);
+        }
+
+        .footer-main-link {
+            @include linkStyle ("Playfair Display", 19px, regular, none, black);
+            padding-left: 36px;
+        }
+
+        .footer-list-link {
+            list-style: none;
+            a {
+                @include linkStyle (Mulish, 18px, light, none, $footer-link-color);
+                line-height: 30px;
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+
+    /*.SOCIALS*/
+    .footer-socials {
+        display: grid;
+        grid-template-columns: repeat(5, 22px);
+        column-gap: 30px;
+        justify-content: center;
+        align-items: end;
+
+        a {
+            margin: 0;
+            padding: 0;
+        }
+    }
+}
